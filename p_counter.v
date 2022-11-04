@@ -5,8 +5,9 @@ module p_counter (
 	input pc_out,
 	input jump,
 	output reg[3:0] q,
-	input[3:0] bus_in,
+	input[3:0] bus_in,  //BUS[3:0]
 	output reg[3:0] bus_out);
+	
 	
 	initial begin
 		q = 4'b0;
@@ -16,6 +17,8 @@ module p_counter (
 		
 		if(reset)
 			q <= 0;
+			
+		if(q == 4'b1 + 1) q <= 4'b0;
 		else begin
 			if(pc_inc)
 				q <= q + 1;

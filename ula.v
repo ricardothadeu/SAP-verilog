@@ -4,7 +4,6 @@ module ula(
 	input[1:0] selecao,
 	output reg[7:0] bus,
 	
-	
 	input add_sub,
 	input not_acc,
 	input alu_out);

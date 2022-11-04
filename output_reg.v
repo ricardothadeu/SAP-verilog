@@ -2,8 +2,8 @@ module output_reg (
 	input clock,
 	input reset,
 	input opr_in,
-	input[7:0] bus
-	output reg [7:0] out_bus);
+	input[7:0] bus,
+	output reg[7:0] out_bus);
 	
 	
 	always @(posedge clock) begin
